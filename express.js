@@ -32,7 +32,7 @@ app.get('/hello/:name', (req, res) => {
 
 // Must be last:
 app.use((req, res, next) => {
-  res.status(404).render(`<!DOCTYPE html>
+  res.status(404).end(`<!DOCTYPE html>
   <html>
     <head>
       <title>404: Page Not Found</title>
