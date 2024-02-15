@@ -22,3 +22,22 @@ app.get('/hello/:name', (req, res) => {
   </body>
 </html>`);
 });
+
+// Must be last:
+app.use((req, res, next) => {
+  res.status(404).render(`<!DOCTYPE html>
+  <html>
+    <head>
+      <title>404: Page Not Found</title>
+    </head>
+    <body>
+      <h1>404: Page Not Found!</h1>
+      <nav>
+        <a href="/">
+          Click here
+        </a>
+        to return to the home page.
+      </nav>
+    </body>
+  </html>`);
+});
