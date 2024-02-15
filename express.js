@@ -10,6 +10,13 @@ app.get('/', (req, res) => {
   res.send('<h1>Hello World</h1>')
 });
 
+app.get('/about', (req, res) => {
+  res.send(`
+  <h1>"Git Practice"</h1>
+  <p>Our goal in this project is to develop a basic Express application. 
+  This will be done as a team with a mentor to practice good git habits.</p>`)
+});
+
 app.get('/hello/:name', (req, res) => {
   const name = req.params.name;
   res.end(`<!DOCTYPE html>
